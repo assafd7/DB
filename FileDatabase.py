@@ -4,7 +4,7 @@ from Database import Database
 
 
 class FileDatabase(Database):
-    def __init__(self, filename='Database.bin'):
+    def __init__(self, filename='Database.pkl'):
         """Initialize database with filename for persistence and load existing data."""
         super().__init__()  # Initialize the base class
         self.filename = filename
