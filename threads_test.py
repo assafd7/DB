@@ -1,5 +1,5 @@
 # thread_test.py
-from Synchronization import Synchronization
+from sync_database import SyncDatabase
 from threading import Thread
 
 
@@ -13,7 +13,7 @@ def writer(database, key, value):
 
 
 if __name__ == "__main__":
-    db = Synchronization( "threads")
+    db = SyncDatabase("db_file.pkl", mode="threads")
 
     # Writer thread
     writer_thread = Thread(target=writer, args=(db, "key1", "value1"))
